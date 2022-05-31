@@ -1,0 +1,28 @@
+.fontWrapperCard {
+  min-width: 60px;
+}
+.cardLi {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardLi .icon {
+  border: 1px solid grey;
+  padding: 3px;
+  border-radius: 5px;
+  margin: 1px 2px;
+    cursor: pointer;
+}
+.cardLi p {
+  text-align: left;
+  flex-grow: 1;
+  margin-left: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.cartListAmountWrapper {
+    min-width: 100px;
+    margin-left:10px;
+  }
+  

@@ -1,0 +1,106 @@
+.shopWrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.headerShopWrapper {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 20vh;
+}
+.titleHeaderShopWrapper {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin: 4vw;
+  text-transform: uppercase;
+}
+.headerShopWrapper button {
+  font-size: 1.1rem;
+  padding: 10px 40px;
+  margin: 0;
+  border-radius: 20px;
+  border: 1px solid white;
+  color: white;
+  font-weight: 600;
+  background-color: rgb(112, 107, 107);
+  cursor: pointer;
+}
+.headerShopWrapper button:first-child {
+  margin-right: -10px;
+}
+/* .headerShopWrapper > button:last-child {
+  margin: 4vw;
+} */
+.headerShopWrapper input {
+  padding: 10px 40px;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.1rem;
+  background-color: rgb(182, 177, 177);
+  outline: none;
+}
+.shopItemsWrapper {
+  display: flex;
+  width: 100%;
+  align-content: center;
+}
+.shopCategory {
+  width: 15%;
+  min-width: 270px;
+  height: 70vh;
+  padding: 80px 3vw;
+  /* border-right: 1px solid black; */
+  color: white;
+  font-size: 20px;
+}
+.shopCategory ul {
+  list-style-type: none;
+}
+.shopCategory ul li {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50px 100px;
+  margin: 25px 0;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.shopCategory ul li:hover {
+  background-color: rgb(182, 177, 177);
+}
+.loginShopWrapper {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.FontAwesomeIcon {
+  font-size: 2rem;
+  margin: 0 10px 0 25px;
+  cursor: pointer;
+  padding:5px;
+}
+.shoppingCardCounter {
+  position: absolute;
+  color: white;
+  background-color: rgb(182, 177, 177);
+  border-radius: 100%;
+  padding: 5px 10px;
+  top: -70%;
+  right: 0;
+}
+.counterWrapper {
+  position: relative;
+}
+.shopItems {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 20px;
+}
