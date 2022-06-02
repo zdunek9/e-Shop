@@ -10,6 +10,7 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { counterActions } from "../../StoreLogic";
+import { counter } from "@fortawesome/fontawesome-svg-core";
 
 const Shop = () => {
   const showTotalQuantity = useSelector((state) => state.counter.totalQuantity);
@@ -56,7 +57,6 @@ const Shop = () => {
     setCatID(2);
   };
   const genderChangeMen = () => {
-    // setData(data.filter((element) => element.category !== "women's clothing"));
     setChangeGender(true);
     if (catID === 0) {
       setData(
@@ -65,7 +65,6 @@ const Shop = () => {
     }
   };
   const genderChangeWomen = () => {
-    // setData(data.filter((element) => element.category !== "men's clothing"));
     setChangeGender(false);
     if (catID === 0) {
       setData(
@@ -73,6 +72,8 @@ const Shop = () => {
       );
     }
   };
+
+
   return (
     <div className={classes.shopWrapper}>
       <div className={classes.headerShopWrapper}>
@@ -80,12 +81,26 @@ const Shop = () => {
           <p className={classes.titleHeaderShopWrapper}>smartwatch</p>
         </div>
         <div>
-          <button onClick={genderChangeMen}>Men</button>
-          <button onClick={genderChangeWomen}>Women</button>
+          <button
+            onClick={genderChangeMen}
+            className={`${
+              changeGender ? classes.isActiveButton : classes.notActive
+            }`}
+          >
+            Men
+          </button>
+          <button
+            onClick={genderChangeWomen}
+            className={`${
+              changeGender ? classes.notActive : classes.isActiveButton
+            }`}
+          >
+            Women
+          </button>
         </div>
         <input type="text" className={classes.inputShop} placeholder="Search" />
         <div className={classes.loginShopWrapper}>
-          <button>Login</button>
+          <button className={classes.loginBTN}>Login</button>
           <div className={classes.counterWrapper}>
             <FontAwesomeIcon
               icon={faCartShopping}

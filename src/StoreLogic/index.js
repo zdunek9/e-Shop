@@ -2,9 +2,16 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const initialStoreState = {
   items: [],
+  // getItems: [
+  //   {
+  //     amount: 0,
+  //     availability: 0,
+  //   },
+  // ],
   showCard: false,
   totalQuantity: 0,
   totalAmount: 0,
+  isEmpty: false,
 };
 
 const counterSlice = createSlice({
@@ -21,13 +28,25 @@ const counterSlice = createSlice({
           amount: 1,
           title: item.title,
           totalPrice: item.price,
+          availability: Math.floor(Math.random() * 20) + 1,
         });
-      } else {
+        state.totalAmount = state.totalAmount + item.price;
+        state.totalQuantity++;
+      } else if (existItem.amount < existItem.availability) {
         existItem.amount++;
         existItem.totalPrice = existItem.totalPrice + item.price;
+        state.totalAmount = state.totalAmount + item.price;
+        state.totalQuantity++;
       }
-      state.totalAmount = state.totalAmount + item.price
-      state.totalQuantity++;
+    },
+    checkAmount(state, action) {
+      const id = action.payload;
+      const existItem = state.items.find((item) => item.id === id);
+      if (existItem.amount === existItem.availability) {
+        state.isEmpty = true;
+      } else {
+        state.isEmpty = false;
+      }
     },
     removeItem(state, action) {
       const id = action.payload;
@@ -39,7 +58,7 @@ const counterSlice = createSlice({
         existItem.totalPrice = existItem.totalPrice - existItem.price;
       }
       state.totalQuantity--;
-      state.totalAmount = state.totalAmount - existItem.price
+      state.totalAmount = state.totalAmount - existItem.price;
     },
     changeShowCard(state) {
       state.showCard = !state.showCard;

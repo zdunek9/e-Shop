@@ -10,8 +10,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  margin-bottom: 20vh;
+  color: var(--black);
+  margin-bottom: 15vh;
 }
 .titleHeaderShopWrapper {
   font-size: 2.3rem;
@@ -24,39 +24,39 @@
   padding: 10px 40px;
   margin: 0;
   border-radius: 20px;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid var(--black);
+  color: var(--white);
   font-weight: 600;
-  background-color: rgb(112, 107, 107);
+  background-color: var(--black);
   cursor: pointer;
+  transition: 0.3s;
+  position: relative;
 }
 .headerShopWrapper button:first-child {
   margin-right: -10px;
 }
-/* .headerShopWrapper > button:last-child {
-  margin: 4vw;
-} */
 .headerShopWrapper input {
   padding: 10px 40px;
   border-radius: 15px;
   border: none;
   font-size: 1.1rem;
-  background-color: rgb(182, 177, 177);
+  background-color: var(--white);
   outline: none;
 }
 .shopItemsWrapper {
   display: flex;
   width: 100%;
   align-content: center;
+  justify-content: center;
+  /* overflow-y: scroll; */
 }
 .shopCategory {
-  width: 15%;
+  /* width: 15vw; */
   min-width: 270px;
   height: 70vh;
   padding: 80px 3vw;
-  /* border-right: 1px solid black; */
-  color: white;
-  font-size: 20px;
+  color: var(--black);
+  font-size: 23px;
 }
 .shopCategory ul {
   list-style-type: none;
@@ -82,12 +82,15 @@
   font-size: 2rem;
   margin: 0 10px 0 25px;
   cursor: pointer;
-  padding:5px;
+  padding: 5px;
+}
+.FontAwesomeIcon:hover {
+  color: var(--hoverBTN);
 }
 .shoppingCardCounter {
   position: absolute;
-  color: white;
-  background-color: rgb(182, 177, 177);
+  color: var(--white);
+  background-color: var(--black);
   border-radius: 100%;
   padding: 5px 10px;
   top: -70%;
@@ -98,9 +101,27 @@
 }
 .shopItems {
   width: 100%;
+  width: 1050px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: white;
+  justify-content: flex-start;
+  background-color: var(--white);
   border-radius: 20px;
+}
+
+.isActiveButton {
+  background-color: var(--black) !important;
+  color: var(--white) !important;
+  font-size: 1.3rem !important;
+  z-index: 1 !important;
+}
+.notActive {
+  background-color: var(--white) !important;
+  color: var(--black) !important;
+}
+.loginBTN {
+  border: none !important;
+}
+.loginBTN:hover {
+  background-color: var(--hoverBTN);
 }

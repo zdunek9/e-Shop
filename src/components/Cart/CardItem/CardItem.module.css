@@ -12,7 +12,11 @@
   padding: 3px;
   border-radius: 5px;
   margin: 1px 2px;
-    cursor: pointer;
+  cursor: pointer;
+}
+.cardLi .icon:nth-child(2) {
+  color: var(--white);
+  background-color: var(--black);
 }
 .cardLi p {
   text-align: left;
@@ -22,7 +26,6 @@
   white-space: nowrap;
 }
 .cartListAmountWrapper {
-    min-width: 100px;
-    margin-left:10px;
-  }
-  
+  min-width: 100px;
+  margin-left: 10px;
+}

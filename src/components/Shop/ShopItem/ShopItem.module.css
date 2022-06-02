@@ -1,18 +1,31 @@
 .shopItemWrapper {
   min-height: 200px;
   height: 400px;
-  width: 15vw;
-  margin: 30px 30px;
-  padding: 10px;
+  flex-basis: 30%;
   max-width: 300px;
-  min-width: 200px;
-  border: 1px solid white;
+  padding: 10px;
+  margin: 40px 25px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  border: 2px solid rgb(218, 216, 216);
+  border: 2px solid var(--lessWhite);
+  transition: 0.3s;
+}
+.shopItemWrapper button {
+  height: 10%;
+  width: 50%;
+  font-size: 1.2rem;
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.shopItemWrapper:hover {
+  transform: scale(1.1, 1.1);
 }
 .imgShopItem {
   height: 60%;
@@ -22,24 +35,42 @@
 }
 .titleShopItem {
   height: 20%;
-  color: rgb(95, 93, 93);
+  color: var(--black);
+  font-weight: 500;
   overflow: hidden;
   padding: 5px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  user-select: text;
 }
 .priceShopItem {
   height: 10%;
+  font-weight: 700;
   font-size: 1.1rem;
-  color: rgb(95, 93, 93);
+  color: var(--black);
 }
 .addItemButton {
   height: 10%;
   width: 50%;
   font-size: 1.2rem;
-  border: 2px solid rgb(145, 141, 141);
-  background-color: rgb(182, 177, 177);
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
+}
+.addItemButtonFullCart {
+  height: 10%;
+  width: 50%;
+  font-size: 1.2rem;
+  border: none;
+  background-color: var(--greyHover) !important; 
+  color: var(--white);
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.addItemButton:hover {
+  background-color: var(--hoverBTN);
 }

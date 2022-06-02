@@ -15,7 +15,7 @@ const Header = () => {
         <div>
           <p className={classes.headerTopBarName}>smartwatch</p>
         </div>
-        <div>
+        <div className={classes.headerTopBarCat}>
           <p>Home</p>
           <p>about</p>
           <p>shop</p>
