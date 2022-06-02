@@ -33,7 +33,9 @@ const Cart = () => {
             />
           ))}
         </ul>
-        <p className={classes.cartTotalQuantity}>Total Quantity: {showAmount.toFixed(2)}$</p>
+        <p className={classes.cartTotalQuantity}>
+          Total Quantity: {showAmount.toFixed(2)}$
+        </p>
       </div>
     </div>
   );

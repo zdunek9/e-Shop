@@ -10,7 +10,6 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { counterActions } from "../../StoreLogic";
-import { counter } from "@fortawesome/fontawesome-svg-core";
 
 const Shop = () => {
   const showTotalQuantity = useSelector((state) => state.counter.totalQuantity);

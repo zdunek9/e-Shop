@@ -1,11 +1,9 @@
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { counterActions } from "../../../StoreLogic";
 import classes from "./ShopItem.module.css";
 const ShopItem = (props) => {
   const dispatch = useDispatch();
   const itemList = useSelector((state) => state.counter.items);
-  let findItem = 1;
   const addItem = () => {
     dispatch(
       counterActions.addItem({
@@ -14,21 +12,18 @@ const ShopItem = (props) => {
         price: props.price,
       })
     );
-
-
   };
-  findItem = itemList.find((item) => item.id === props.id);
-  console.log(findItem);
+  const findItem = itemList.find((item) => item.id === props.id);
   return (
     <div className={classes.shopItemWrapper}>
       <img src={props.img} alt="itemPhoto" className={classes.imgShopItem} />
       <p className={classes.titleShopItem}>{props.title}</p>
       <p className={classes.priceShopItem}>{props.price}$</p>
-        <button
+      <button
         className={`${
-          findItem && (findItem.amount<findItem.availability
-            ? classes.addItemButton
-            : classes.addItemButtonFullCart)
+          findItem &&
+          !(findItem.amount < findItem.availability) &&
+          classes.addItemButtonFullCart
         }`}
         onClick={addItem}
       >

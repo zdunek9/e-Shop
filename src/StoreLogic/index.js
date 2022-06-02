@@ -2,16 +2,9 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const initialStoreState = {
   items: [],
-  // getItems: [
-  //   {
-  //     amount: 0,
-  //     availability: 0,
-  //   },
-  // ],
   showCard: false,
   totalQuantity: 0,
   totalAmount: 0,
-  isEmpty: false,
 };
 
 const counterSlice = createSlice({
@@ -37,15 +30,6 @@ const counterSlice = createSlice({
         existItem.totalPrice = existItem.totalPrice + item.price;
         state.totalAmount = state.totalAmount + item.price;
         state.totalQuantity++;
-      }
-    },
-    checkAmount(state, action) {
-      const id = action.payload;
-      const existItem = state.items.find((item) => item.id === id);
-      if (existItem.amount === existItem.availability) {
-        state.isEmpty = true;
-      } else {
-        state.isEmpty = false;
       }
     },
     removeItem(state, action) {
