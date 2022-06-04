@@ -6,10 +6,14 @@ import {
   faGem,
   faLaptop,
   faCartShopping,
+  faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { counterActions } from "../../StoreLogic";
+import { Link } from "react-router-dom";
+import headphones from "../Img/headphones.jpg";
+import ShopInput from "./ShopInput/ShopInput";
 
 const Shop = () => {
   const showTotalQuantity = useSelector((state) => state.counter.totalQuantity);
@@ -72,12 +76,13 @@ const Shop = () => {
     }
   };
 
-
   return (
     <div className={classes.shopWrapper}>
       <div className={classes.headerShopWrapper}>
         <div>
-          <p className={classes.titleHeaderShopWrapper}>smartwatch</p>
+          <Link to="/">
+            <p className={classes.titleHeaderShopWrapper}>smartwatch</p>
+          </Link>
         </div>
         <div>
           <button
@@ -97,7 +102,10 @@ const Shop = () => {
             Women
           </button>
         </div>
-        <input type="text" className={classes.inputShop} placeholder="Search" />
+        <div className={classes.inputShopWrapper}>
+          <ShopInput arrayData={arrayData} />
+          <FontAwesomeIcon icon={faSearch} className={classes.searchIcon} />
+        </div>
         <div className={classes.loginShopWrapper}>
           <button className={classes.loginBTN}>Login</button>
           <div className={classes.counterWrapper}>
@@ -108,6 +116,17 @@ const Shop = () => {
             />
             <p className={classes.shoppingCardCounter}>{showTotalQuantity}</p>
           </div>
+        </div>
+      </div>
+      <div className={classes.promoShopWrapper}>
+        <img
+          src={headphones}
+          className={classes.headphonesShop}
+          alt="New Kopthóres Events"
+        />
+        <div className={classes.titlePromoShopWrapper}>
+          <h1>New Kopthóres Events</h1>
+          <h2>available soon</h2>
         </div>
       </div>
       <div className={classes.shopItemsWrapper}>

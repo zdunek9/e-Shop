@@ -29,12 +29,13 @@ const Cart = () => {
               title={item.title}
               price={item.price}
               amount={item.amount}
+              availability={item.availability}
               totalPrice={item.totalPrice}
             />
           ))}
         </ul>
         <p className={classes.cartTotalQuantity}>
-          Total Quantity: {showAmount.toFixed(2)}$
+          Total Quantity: {`${showAmount >= 0 ? showAmount.toFixed(2) : 0}`}$
         </p>
       </div>
     </div>

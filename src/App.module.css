@@ -6,18 +6,29 @@
 :root {
   --white: #ffffff;
   --black: black;
-  --lessWhite:rgb(224, 224, 224);
-  --grey:rgba(150, 150, 150, 0.877);
+  --lessWhite: rgb(224, 224, 224);
+  --grey: rgba(150, 150, 150, 0.877);
   --greyHover: rgba(187, 184, 184, 0.877);
   --hoverBTN: rgb(54, 54, 54);
 }
 body {
-  background-color:var(--lessWhite);
+  background-color: var(--lessWhite);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    display: flex;
-    justify-content: center;
-    user-select: none;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+a:link {
+  text-decoration: none;
+  color:inherit;
+  background-color:inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color:inherit;
+  background-color:inherit;
 }
 .App {
   display: flex;

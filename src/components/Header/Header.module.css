@@ -50,24 +50,35 @@
   margin-bottom: 40px;
   font-weight: 600;
 }
-.tittleHeader button {
+
+.LearnMoreBTN {
+  background-color: var(--black);
+  color: white;
   font-size: 1.1rem;
   padding: 10px 40px;
   margin: 20px;
   border-radius: 20px;
   border: 1px solid white;
-  background-color: var(--white);
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
 }
-.tittleHeader button:hover {
-  background-color: rgb(236, 232, 232);
+.shopNowBTN {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 1.1rem;
+  padding: 10px 40px;
+  margin: 20px;
+  border-radius: 20px;
+  border: 1px solid white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
 }
-.tittleHeader button:last-child {
-  background-color: var(--black);
-  color: white;
+.shopNowBTN:hover {
+  background-color: var(--lessWhite);
 }
-.tittleHeader button:last-child:hover {
+
+.LearnMoreBTN:hover {
   background-color: var(--hoverBTN);
 }

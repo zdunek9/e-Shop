@@ -19,6 +19,9 @@ const CardItem = (props) => {
   };
   return (
     <li key={props.id} className={classes.cardLi}>
+      {props.amount === props.availability && (
+        <div className={classes.itemMax}>MAX</div>
+      )}
       <div className={classes.fontWrapperCard}>
         <FontAwesomeIcon
           icon={faMinus}
@@ -27,7 +30,11 @@ const CardItem = (props) => {
         />
         <FontAwesomeIcon
           icon={faPlus}
-          className={classes.icon}
+          className={`${
+            props.amount === props.availability
+              ? classes.iconNotavailable
+              : classes.icon
+          }`}
           onClick={addItemInCard}
         />
       </div>
@@ -39,3 +46,8 @@ const CardItem = (props) => {
   );
 };
 export default CardItem;
+// className={`${
+//   findItem &&
+//   !(findItem.amount < findItem.availability) &&
+//   classes.addItemButtonFullCart
+// }`}

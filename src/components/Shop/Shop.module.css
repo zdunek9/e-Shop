@@ -11,12 +11,11 @@
   justify-content: space-between;
   align-items: center;
   color: var(--black);
-  margin-bottom: 15vh;
 }
 .titleHeaderShopWrapper {
   font-size: 2.3rem;
   font-weight: 600;
-  margin: 4vw;
+  margin: 2vw 4vw;
   text-transform: uppercase;
 }
 .headerShopWrapper button {
@@ -34,14 +33,6 @@
 }
 .headerShopWrapper button:first-child {
   margin-right: -10px;
-}
-.headerShopWrapper input {
-  padding: 10px 40px;
-  border-radius: 15px;
-  border: none;
-  font-size: 1.1rem;
-  background-color: var(--white);
-  outline: none;
 }
 .shopItemsWrapper {
   display: flex;
@@ -124,4 +115,33 @@
 }
 .loginBTN:hover {
   background-color: var(--hoverBTN);
+}
+.inputShopWrapper {
+  position: relative;
+}
+.searchIcon {
+  position: absolute;
+  left: 3%;
+  top: 25%;
+  font-size: 20px;
+  color: var(--grey);
+}
+.headphonesShop {
+  height: 350px;
+  width: 60%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.titlePromoShopWrapper h1 {
+  font-size: 50px;
+}
+.titlePromoShopWrapper h2 {
+  font-size: 30px;
+}
+.promoShopWrapper {
+  border-radius: 10px;
+  background-color: white;
+  margin: 30px 0 30px 50px;
+  display: flex;
+  align-items: center;
 }
