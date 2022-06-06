@@ -1,23 +1,24 @@
 import { useState } from "react";
 import classes from "./ShopInput.module.css";
 const ShopInput = (props) => {
-  const [inputValue, setInputValue] = useState(0);
   const [filtredArray, setFiltredArray] = useState([]);
+
   const array = props.arrayData;
   const findItem = (e) => {
     const searchArray = array.map((el) => ({ title: el.title, img: el.image }));
-    setInputValue(e.target.value);
-    const regex = new RegExp(inputValue, "gi");
-
-    if (inputValue && inputValue.length >= 2) {
-      let licznik = 0;
-      let newArray = searchArray.filter((item) => {
-        if (item.title.match(regex) && licznik < 5) {
+    const searchWord = e.target.value;
+    const targetValue = new RegExp(searchWord, "gi");
+    let licznik = 0;
+    setFiltredArray(
+      searchArray.filter((el) => {
+        if (el.title.match(targetValue) && licznik < 5) {
           licznik++;
-          return item.title.match(regex);
+          return el;
         }
-      });
-      setFiltredArray(newArray);
+      })
+    );
+    if (searchWord === "") {
+      setFiltredArray([]);
     }
   };
   return (
@@ -27,16 +28,16 @@ const ShopInput = (props) => {
         className={classes.inputShop}
         placeholder="Search"
         onChange={findItem}
+        defaultValue=""
       />
       <ul className={classes.filtredListShopInput}>
-        {inputValue.length >= 3 &&
-          filtredArray.map((el) => (
-            <li key={el.title} className={classes.filtredListShopInputItem}>
-              <a href="#">
-                <img src={el.img} alt={el.title} /> {el.title}
-              </a>
-            </li>
-          ))}
+        {filtredArray.map((el) => (
+          <li key={el.title} className={classes.filtredListShopInputItem}>
+            <a href="#">
+              <img src={el.img} alt="item photo" /> {el.title}
+            </a>
+          </li>
+        ))}
       </ul>
     </>
   );
