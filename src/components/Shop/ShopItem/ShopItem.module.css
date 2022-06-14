@@ -13,7 +13,7 @@
   border: 2px solid var(--lessWhite);
   transition: 0.3s;
 }
-.shopItemWrapperUpSide{
+.shopItemWrapperUpSide {
   height: 90%;
   display: flex;
   flex-direction: column;
@@ -30,6 +30,7 @@
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
+  position: relative;
 }
 .shopItemWrapper:hover {
   transform: scale(1.1, 1.1);
@@ -58,8 +59,29 @@
 }
 
 .addItemButtonFullCart {
-  background-color: var(--greyHover) !important; 
+  background-color: var(--greyHover) !important;
 }
-.addItemButton:hover {
+.shopItemWrapper button:hover {
   background-color: var(--hoverBTN);
+}
+.clickedButton::after {
+  position: absolute;
+  left: 150px;
+  top: 2px;
+  color: red;
+  content: "+1";
+  opacity: 0;
+  animation: 0.2s buttonClick linear;
+  font-family: 'Indie Flower', cursive;
+}
+@keyframes buttonClick {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

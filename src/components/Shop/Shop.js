@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import headphones from "../Img/headphones.jpg";
 import ShopInput from "./ShopInput/ShopInput";
 import ShopDetails from "./ShopDetails/ShopDetails";
+import Loading from "./Loading/Loading";
 
 const Shop = () => {
   const showTotalQuantity = useSelector((state) => state.counter.totalQuantity);
@@ -86,8 +87,8 @@ const Shop = () => {
     }
   };
   return (
-    <>
-      {(itemDetails || itemDetails == 0) && (
+    <div className={classes.shopMainWrapper}>
+      {(itemDetails || itemDetails === 0) && (
         <ShopDetails
           title={arrayData[itemDetails].title}
           price={arrayData[itemDetails].price}
@@ -168,6 +169,7 @@ const Shop = () => {
             </ul>
           </div>
           <div className={classes.shopItems}>
+            {!data && <Loading />}
             {data &&
               data.map((element) => (
                 <ShopItem
@@ -182,7 +184,7 @@ const Shop = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

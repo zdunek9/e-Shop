@@ -23,7 +23,13 @@
 .headerTopBar div p {
   padding: 1vw 2vw;
 }
+.headerTopBar div a {
+  padding: 1vw 2vw;
+}
 .headerTopBarCat p:hover {
+  background-color: var(--greyHover);
+}
+.headerTopBar div a:hover {
   background-color: var(--greyHover);
 }
 .headerTopBarName {
@@ -81,4 +87,8 @@
 
 .LearnMoreBTN:hover {
   background-color: var(--hoverBTN);
+}
+.aboutHeader {
+  width: 100%;
+  height: 100%;
 }

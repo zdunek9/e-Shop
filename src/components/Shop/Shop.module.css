@@ -1,8 +1,16 @@
+.shopMainWrapper{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  /* height: 100vh; */
+  background-color: var(--lessWhite);
+}
 .shopWrapper {
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding:30px
 }
 .headerShopWrapper {
   width: 100%;
@@ -128,7 +136,7 @@
 }
 .headphonesShop {
   height: 350px;
-  width: 60%;
+  width: 50%;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -141,7 +149,7 @@
 .promoShopWrapper {
   border-radius: 10px;
   background-color: white;
-  margin: 30px 0 30px 50px;
+  margin:50px 100px;
   display: flex;
   align-items: center;
 }

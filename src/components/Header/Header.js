@@ -14,15 +14,15 @@ const Header = () => {
     <div className={classes.headerWrapper}>
       <div className={classes.headerTopBar}>
         <div>
-            <p className={classes.headerTopBarName}>smartwatch</p>
+          <p className={classes.headerTopBarName}>smartwatch</p>
         </div>
         <div className={classes.headerTopBarCat}>
           <p>Home</p>
-          <p>about</p>
-          <Link to="/shop">
-            <p>shop</p>
-          </Link>
-          <p>contact</p>
+          <a className={classes.aboutHeader} href="#About">
+            about
+          </a>
+          <Link to="/shop">shop</Link>
+          <a href="#Contact">contact</a>
         </div>
         <div>
           <p>
