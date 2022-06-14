@@ -14,8 +14,11 @@ const ShopItem = (props) => {
     );
   };
   const findItem = itemList.find((item) => item.id === props.id);
+  const openDetailsFunc = () => {
+    props.detailID(props.id);
+  };
   return (
-    <div className={classes.shopItemWrapper}>
+    <div className={classes.shopItemWrapper} onClick={openDetailsFunc}>
       <img src={props.img} alt="itemPhoto" className={classes.imgShopItem} />
       <p className={classes.titleShopItem}>{props.title}</p>
       <p className={classes.priceShopItem}>{props.price}$</p>

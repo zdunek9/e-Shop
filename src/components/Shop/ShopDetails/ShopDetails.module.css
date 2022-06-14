@@ -1,0 +1,53 @@
+.wrapperShopDetails {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(165, 172, 172, 0.562);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainShopDetails {
+  width: 60vw;
+  /* height: 60vh; */
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: white;
+  position:relative;
+}
+.imgShopDetails {
+  width: 50%;
+  object-fit: contain;
+}
+.descriptionShopDetails {
+  padding: 15px;
+}
+.titleShopDetails {
+  font-size: 2.2rem;
+  border-bottom: 1px solid black;
+}
+.descShopDetails {
+  font-size: 1.2rem;
+  padding:20px 0;
+  flex-grow: 1;
+}
+.ratingShopDetails {
+  position:absolute;
+  top:10px;
+  left:10px;
+  background-color: yellow;
+  border-radius: 100%;
+  padding:15px;
+  font-weight: 600;
+}
+.priceShopDetails {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+}

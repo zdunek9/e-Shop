@@ -50,6 +50,21 @@ const counterSlice = createSlice({
   },
 });
 
-const store = configureStore({ reducer: { counter: counterSlice.reducer } });
+// const transportItemSlice = createSlice({
+//   name: "showItem",
+//   initialState: { showItem: [] },
+//   reducers: {
+//     addToShow(state, action) {
+//       state.showItem = action.payload;
+//     },
+//   },
+// });
+const store = configureStore({
+  reducer: {
+    counter: counterSlice.reducer,
+    // showItem: transportItemSlice.reducer,
+  },
+});
 export const counterActions = counterSlice.actions;
+// export const showItemActions = transportItemSlice.actions;
 export default store;
