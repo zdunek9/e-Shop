@@ -18,10 +18,12 @@ const ShopItem = (props) => {
     props.detailID(props.id);
   };
   return (
-    <div className={classes.shopItemWrapper} onClick={openDetailsFunc}>
-      <img src={props.img} alt="itemPhoto" className={classes.imgShopItem} />
-      <p className={classes.titleShopItem}>{props.title}</p>
-      <p className={classes.priceShopItem}>{props.price}$</p>
+    <div className={classes.shopItemWrapper}>
+      <div className={classes.shopItemWrapperUpSide} onClick={openDetailsFunc}>
+        <img src={props.img} alt="itemPhoto" className={classes.imgShopItem} />
+        <p className={classes.titleShopItem}>{props.title}</p>
+        <p className={classes.priceShopItem}>{props.price}$</p>
+      </div>
       <button
         className={`${
           findItem &&
