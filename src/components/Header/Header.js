@@ -1,15 +1,7 @@
 import classes from "./Header.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import image_watch from "../Img/ew.png";
-import { useDispatch } from "react-redux";
-import { counterActions } from "../../StoreLogic";
 import { Link } from "react-router-dom";
 const Header = () => {
-  const dispatch = useDispatch();
-  const showCardBTN = () => {
-    dispatch(counterActions.changeShowCard());
-  };
   return (
     <div className={classes.headerWrapper}>
       <div className={classes.headerTopBar}>
@@ -23,11 +15,6 @@ const Header = () => {
           </a>
           <Link to="/shop">shop</Link>
           <a href="#Contact">contact</a>
-        </div>
-        <div>
-          <p>
-            <FontAwesomeIcon icon={faCartShopping} onClick={showCardBTN} />
-          </p>
         </div>
       </div>
       <div className={classes.headerMainPage}>

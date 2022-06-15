@@ -46,8 +46,3 @@ const CardItem = (props) => {
   );
 };
 export default CardItem;
-// className={`${
-//   findItem &&
-//   !(findItem.amount < findItem.availability) &&
-//   classes.addItemButtonFullCart
-// }`}

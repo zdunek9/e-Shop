@@ -155,15 +155,15 @@ const Shop = () => {
           <div className={classes.shopCategory}>
             <ul>
               <li onClick={catChangeClothing}>
-                <FontAwesomeIcon icon={faShirt} className={classes.iconShop} />
+                <FontAwesomeIcon icon={faShirt} />
                 <p>Clothing</p>
               </li>
               <li onClick={catChangeJewelery}>
-                <FontAwesomeIcon icon={faGem} className={classes.iconShop} />
+                <FontAwesomeIcon icon={faGem} />
                 <p>Jewelery</p>
               </li>
               <li onClick={catChangeElectronics}>
-                <FontAwesomeIcon icon={faLaptop} className={classes.iconShop} />
+                <FontAwesomeIcon icon={faLaptop} />
                 <p>Electronics</p>
               </li>
             </ul>
