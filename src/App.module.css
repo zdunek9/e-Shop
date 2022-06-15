@@ -19,9 +19,7 @@ body {
     rgba(224, 224, 224, 1) 69%,
     rgba(191, 191, 231, 1) 100%
   );
-  display: flex;
   font-family: "Poppins", sans-serif;
-  justify-content: center;
   user-select: none;
 }
 a:link {
@@ -38,7 +36,9 @@ a:visited {
 .App {
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
+  margin: auto;
+  max-width: 1600px;
+  padding: 0 20px;
 }
 button {
   font-family: "Poppins", sans-serif;

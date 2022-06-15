@@ -3,7 +3,7 @@ import image_watch from "../Img/ew.png";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <div className={classes.headerWrapper}>
+    <section className={classes.headerWrapper} id="Header">
       <div className={classes.headerTopBar}>
         <div>
           <p className={classes.headerTopBarName}>smartwatch</p>
@@ -30,10 +30,12 @@ const Header = () => {
           <Link to="/shop">
             <button className={classes.shopNowBTN}>Shop Now</button>
           </Link>
-          <button className={classes.LearnMoreBTN}>Learn more</button>
+          <a href="#About" className={classes.LearnMoreBTN}>
+            Learn more
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

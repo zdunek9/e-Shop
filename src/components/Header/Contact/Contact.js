@@ -3,6 +3,7 @@ import twitter from "../../Img/icons/twitter.png";
 import facebook from "../../Img/icons/facebook.png";
 import github from "../../Img/icons/github.png";
 import linkedin from "../../Img/icons/linkedin.png";
+import arrowUp from "../../Img/icons/up-arrow.png";
 import Form from "./Form/Form";
 const Contact = () => {
   return (
@@ -35,6 +36,9 @@ const Contact = () => {
           <img src={linkedin} alt="linkedin" />
         </a>
       </div>
+      <a className={classes.buttonArrowUp} href="#Header">
+        <img src={arrowUp} className={classes.arrowUp} alt="arrowUp"></img>
+      </a>
     </section>
   );
 };
