@@ -30,3 +30,18 @@
   border-bottom: 3px solid grey;
   padding: 0 80px;
 }
+@media (max-width: 600px) {
+  .aboutWrapper {
+    padding: 20px 20px;
+    font-size: 13px;
+  }
+  .thirdAbout {
+    top: 72%;
+  }
+}
+@media (max-width: 400px) {
+  .aboutWrapper {
+    padding: 20px 20px;
+    font-size: 11px;
+  }
+}

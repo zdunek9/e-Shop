@@ -43,7 +43,7 @@
   height: 100%;
 }
 .imageWatch {
-  height: 40vh;
+  height: 36vh;
 }
 .tittleHeader h1 {
   font-size: 60px;
@@ -97,10 +97,10 @@
     height: 30vh;
   }
   .tittleHeader h1 {
-    font-size: 30px;
+    font-size: 50px;
   }
   .tittleHeader p {
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 20px;
   }
   .shopNowBTN {
@@ -112,5 +112,32 @@
     font-size: 0.8rem;
     padding: 10px 25px;
     margin: 10px;
+  }
+}
+@media (max-width: 1000px) {
+  .headerTopBarName {
+    display: none;
+  }
+  .headerTopBar {
+    display: block;
+    justify-content: space-around;
+  }
+  .imageWatch {
+    height: 20vh;
+  }
+  .headerMainPage {
+    flex-direction: column;
+  }
+  .tittleHeader h1 {
+    font-size: 60px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 600px) {
+  .headerMainPage {
+    flex-direction: column;
+  }
+  .tittleHeader h1 {
+    font-size: 40px;
   }
 }

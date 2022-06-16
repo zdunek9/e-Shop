@@ -96,13 +96,13 @@
 .shopItems {
   width: 100%;
   width: 1050px;
+  min-width: 1050px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   background-color: var(--white);
   border-radius: 20px;
 }
-
 .isActiveButton {
   background-color: var(--black) !important;
   color: var(--white) !important;
@@ -131,7 +131,7 @@
 }
 .headphonesShop {
   width: 35%;
-  object-fit:contain;
+  object-fit: contain;
   border-radius: 10px;
 }
 .titlePromoShopWrapper h1 {
@@ -146,5 +146,115 @@
   margin: 50px 100px;
   display: flex;
   align-items: center;
-  justify-content:space-around;
+  justify-content: space-around;
+}
+@media (max-width: 1300px) {
+  .shopItems {
+    min-width: auto;
+    justify-content: space-around;
+  }
+  .titleHeaderShopWrapper {
+    font-size: 2rem;
+    margin: 1vw 2vw;
+  }
+  .headerShopWrapper button {
+    font-size: 0.8rem;
+    padding: 10px 30px;
+  }
+  .isActiveButton {
+    font-size: 1rem !important;
+  }
+  .titlePromoShopWrapper h1 {
+    font-size: 40px;
+  }
+  .titlePromoShopWrapper h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1050px) {
+  .searchIcon {
+    display: none;
+  }
+  .titleHeaderShopWrapper {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+  .headerShopWrapper button {
+    font-size: 0.7rem;
+    padding: 5px 20px;
+  }
+  .isActiveButton {
+    font-size: 0.9rem !important;
+  }
+  .FontAwesomeIcon {
+    font-size: 1.5rem;
+  }
+  .shoppingCardCounter {
+    padding: 3px 7px;
+  }
+  .titlePromoShopWrapper h1 {
+    font-size: 30px;
+  }
+  .titlePromoShopWrapper h2 {
+    font-size: 15px;
+  }
+  .headphonesShop {
+    width: 50%;
+  }
+  .shopCategory {
+    min-width: auto;
+    padding: 40px 1vw;
+    font-size: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .promoShopWrapper {
+    width: 100%;
+    margin: 0;
+  }
+  .titlePromoShopWrapper h1 {
+    font-size: 20px;
+  }
+  .shopCategory {
+    min-width: auto;
+    padding: 10px 1vw;
+    font-size: 20px;
+    height: auto;
+  }
+  .shopItemsWrapper {
+    flex-direction: column;
+  }
+  .shopCategory ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .shopCategory ul li {
+    flex-basis: 30%;
+    display: flex;
+  }
+  .FontAwesomeIcon {
+    font-size: 2rem;
+    margin: 0 10px 0 25px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .shopCategory ul li p {
+    padding: 0 10px;
+    font-size: 1rem;
+  }
+  .shopWrapper {
+    padding: 5px;
+  }
+  .shopItems {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .shopMainWrapper {
+    min-height: 100vh;
+    width: 100%;
+  }
+  .titleHeaderShopWrapper {
+    padding: 0 15px 0 0;
+  }
 }

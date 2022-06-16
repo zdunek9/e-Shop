@@ -68,3 +68,26 @@
     min-height: 200px;
   }
 }
+@media (max-width: 1000px) {
+  .formWrapper {
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .formWrapper input {
+    width: 300px;
+  }
+  .formWrapper textarea {
+    max-width: 300px;
+    min-width: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .formWrapper textarea {
+    max-height: 150px;
+    min-height: 150px;
+  }
+  .formWrapper {
+    bottom: 10vh;
+    padding: 10px;
+  }
+}
