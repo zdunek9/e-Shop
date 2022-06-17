@@ -26,7 +26,7 @@
   white-space: nowrap;
 }
 .cartListAmountWrapper {
-  min-width: 100px;
+  min-width: 130px;
   margin-left: 10px;
 }
 .itemMax {
@@ -42,4 +42,16 @@
   border-radius: 5px;
   margin: 1px 2px;
   cursor: pointer;
+}
+@media (max-width: 600px) {
+  .cartListAmountWrapper {
+    min-width: none;
+    margin-left: 10px;
+  }
+  .fontWrapperCard {
+    display: none;
+  }
+  .itemMax {
+    display: none;
+  }
 }

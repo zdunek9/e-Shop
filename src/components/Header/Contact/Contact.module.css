@@ -1,6 +1,7 @@
 .wrapperContact {
   width: 100%;
   height: 100vh;
+  min-height: 900px;
   border-radius: 20px;
   position: relative;
 }
@@ -74,10 +75,14 @@
     right: 50%;
     transform: translate(50%);
   }
+  .bottomWrapperContact h3 {
+    display: none;
+  }
+  
 }
 @media (max-width: 600px) {
   .bottomWrapperContact {
-    bottom: 10px;
+    bottom: 50px;
     height: 10vh;
   }
   .bottomWrapperContact img {
@@ -90,7 +95,7 @@
   .adressDetailsContact {
     font-size: 16px;
     width: 90%;
-    bottom: 70vh;
+    bottom: 75vh;
     right: 50%;
     transform: translate(50%);
   }
@@ -101,6 +106,11 @@
     height: 3vh;
   }
   .adressDetailsContact {
+    display: none;
+  }
+}
+@media (max-height: 900px){
+  .bottomWrapperContact {
     display: none;
   }
 }

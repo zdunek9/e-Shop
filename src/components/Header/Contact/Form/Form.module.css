@@ -71,7 +71,11 @@
 @media (max-width: 1000px) {
   .formWrapper {
     left: 50%;
+    bottom:23vh;
     transform: translate(-50%);
+  }
+  .formWrapper h2 {
+    font-size: 1.4rem;
   }
   .formWrapper input {
     width: 300px;
@@ -79,6 +83,13 @@
   .formWrapper textarea {
     max-width: 300px;
     min-width: 300px;
+    max-height: 130px;
+    min-height: 130px;
+  }
+  .formWrapper button {
+    padding: 5px 10px;
+    margin: 15px;
+    font-size: 0.7rem;
   }
 }
 @media (max-width: 600px) {
@@ -86,8 +97,14 @@
     max-height: 150px;
     min-height: 150px;
   }
+  
+  .formWrapper {
+    bottom: 20vh;
+    padding: 10px;
+  }
+}
+@media (max-height: 850px) {
   .formWrapper {
     bottom: 10vh;
-    padding: 10px;
   }
 }

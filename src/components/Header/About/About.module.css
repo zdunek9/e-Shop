@@ -1,5 +1,6 @@
 .aboutWrapper {
   height: 100vh;
+  min-height: 700px;
   width: 100%;
   padding: 100px 50px;
   position: relative;

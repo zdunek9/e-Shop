@@ -258,3 +258,33 @@
     padding: 0 15px 0 0;
   }
 }
+@media (max-width: 600px) {
+  .shopCategory ul li p {
+    padding: 0 2px;
+    font-size: 0.8rem;
+  }
+  .loginShopWrapper{
+    flex-direction: column;
+  }
+  .counterWrapper{
+    position: block;
+    top:10%;
+    font-size: 12px;
+  }
+  .FontAwesomeIcon{
+    font-size: 18px;
+  }
+  .shoppingCardCounter{
+    top:0;
+    right:-10px;
+  }
+  .titleHeaderShopWrapper {
+    font-size: 1.5rem;
+  }
+  .headerShopWrapper button {
+    font-size: 0.6rem;
+  }
+  .isActiveButton {
+    font-size: 0.7rem !important;
+  }
+}
