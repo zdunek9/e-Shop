@@ -14,6 +14,7 @@ const Shop = () => {
   const [arrayData, setArrayData] = useState(null);
   const [data, setData] = useState(null);
   const [itemDetails, setItemDetails] = useState(null);
+  const [catID, setCatID] = useState(0);
   useEffect(() => {
     fetchData();
   }, []);
@@ -38,12 +39,15 @@ const Shop = () => {
         arrayData.filter((element) => element.category === "women's clothing")
       );
     }
+    setCatID(0);
   };
   const catChangeJewelery = () => {
     setData(arrayData.filter((element) => element.category === "jewelery"));
+    setCatID(1);
   };
   const catChangeElectronics = () => {
     setData(arrayData.filter((element) => element.category === "electronics"));
+    setCatID(2);
   };
   const openDetailsItem = (detailID) => {
     setItemDetails((detailID = detailID - 1));
@@ -55,12 +59,11 @@ const Shop = () => {
   };
 
   const changeState = (value) => {
-    
-    if (value) {
+    if (value && catID === 0) {
       setData(
         arrayData.filter((element) => element.category === "men's clothing")
       );
-    } else {
+    } else if (!value && catID === 0) {
       setData(
         arrayData.filter((element) => element.category === "women's clothing")
       );
