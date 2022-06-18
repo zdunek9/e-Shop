@@ -5,6 +5,7 @@ const initialStoreState = {
   showCard: false,
   totalQuantity: 0,
   totalAmount: 0,
+  gender: true,
 };
 
 const counterSlice = createSlice({
@@ -46,6 +47,9 @@ const counterSlice = createSlice({
     },
     changeShowCard(state) {
       state.showCard = !state.showCard;
+    },
+    changeGender(state, action) {
+      state.gender = action.payload;
     },
   },
 });

@@ -1,0 +1,47 @@
+.headphonesShop {
+  width: 35%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.titlePromoShopWrapper h1 {
+  font-size: 50px;
+}
+.titlePromoShopWrapper h2 {
+  font-size: 30px;
+}
+.promoShopWrapper {
+  border-radius: 10px;
+  background-color: white;
+  margin: 50px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 1300px) {
+  .titlePromoShopWrapper h1 {
+    font-size: 40px;
+  }
+  .titlePromoShopWrapper h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1050px) {
+  .titlePromoShopWrapper h1 {
+    font-size: 30px;
+  }
+  .titlePromoShopWrapper h2 {
+    font-size: 15px;
+  }
+  .headphonesShop {
+    width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  .promoShopWrapper {
+    width: 100%;
+    margin: 0;
+  }
+  .titlePromoShopWrapper h1 {
+    font-size: 20px;
+  }
+}

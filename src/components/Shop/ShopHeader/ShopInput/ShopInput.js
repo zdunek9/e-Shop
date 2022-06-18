@@ -1,6 +1,6 @@
 import { useState } from "react";
 import classes from "./ShopInput.module.css";
-import ShopDetails from "../ShopDetails/ShopDetails";
+import ShopDetails from "../../ShopDetails/ShopDetails";
 const ShopInput = (props) => {
   const [filtredArray, setFiltredArray] = useState([]);
   const [closeInput, setCloseInput] = useState(true);

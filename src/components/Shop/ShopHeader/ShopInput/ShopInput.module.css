@@ -64,4 +64,8 @@
   .inputShop {
     display: none;
   }
+  .filtredListShopInput {
+    width: 0px;
+
+  }
 }

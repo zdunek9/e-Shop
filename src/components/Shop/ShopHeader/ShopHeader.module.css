@@ -1,0 +1,157 @@
+.headerShopWrapper {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--black);
+}
+.titleHeaderShopWrapper {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin: 2vw 4vw;
+  text-transform: uppercase;
+}
+.headerShopWrapper button {
+  font-size: 1.1rem;
+  padding: 10px 40px;
+  margin: 0;
+  border-radius: 20px;
+  border: 1px solid var(--black);
+  color: var(--white);
+  font-weight: 600;
+  background-color: var(--black);
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+.headerShopWrapper button:first-child {
+  margin-right: -10px;
+}
+
+.loginShopWrapper {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.FontAwesomeIcon {
+  font-size: 2rem;
+  margin: 0 10px 0 25px;
+  cursor: pointer;
+  padding: 5px;
+}
+.FontAwesomeIcon:hover {
+  color: var(--hoverBTN);
+}
+.shoppingCardCounter {
+  position: absolute;
+  color: var(--white);
+  background-color: var(--black);
+  border-radius: 100%;
+  padding: 5px 10px;
+  top: -70%;
+  right: 0;
+}
+.counterWrapper {
+  position: relative;
+}
+.isActiveButton {
+  background-color: var(--black) !important;
+  color: var(--white) !important;
+  font-size: 1.3rem !important;
+  z-index: 1 !important;
+}
+.notActive {
+  background-color: var(--white) !important;
+  color: var(--black) !important;
+}
+.loginBTN {
+  border: none !important;
+}
+.loginBTN:hover {
+  background-color: var(--hoverBTN);
+}
+.inputShopWrapper {
+  position: relative;
+}
+.searchIcon {
+  position: absolute;
+  left: 3%;
+  top: 25%;
+  font-size: 20px;
+  color: var(--grey);
+}
+
+@media (max-width: 1300px) {
+  .titleHeaderShopWrapper {
+    font-size: 2rem;
+    margin: 1vw 2vw;
+  }
+  .headerShopWrapper button {
+    font-size: 0.8rem;
+    padding: 10px 30px;
+  }
+  .isActiveButton {
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 1050px) {
+  .searchIcon {
+    display: none;
+  }
+  .titleHeaderShopWrapper {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+  .headerShopWrapper button {
+    font-size: 0.7rem;
+    padding: 5px 20px;
+  }
+  .isActiveButton {
+    font-size: 0.9rem !important;
+  }
+  .FontAwesomeIcon {
+    font-size: 1.5rem;
+  }
+  .shoppingCardCounter {
+    padding: 3px 7px;
+  }
+
+}
+@media (max-width: 800px) {
+  .FontAwesomeIcon {
+    font-size: 2rem;
+    margin: 0 10px 0 25px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .titleHeaderShopWrapper {
+    padding: 0 15px 0 0;
+  }
+}
+@media (max-width: 600px) {
+  .loginShopWrapper{
+    flex-direction: column;
+  }
+  .counterWrapper{
+    position: block;
+    top:10%;
+    font-size: 12px;
+  }
+  .FontAwesomeIcon{
+    font-size: 18px;
+  }
+  .shoppingCardCounter{
+    top:0;
+    right:-10px;
+  }
+  .titleHeaderShopWrapper {
+    font-size: 1.5rem;
+  }
+  .headerShopWrapper button {
+    font-size: 0.6rem;
+  }
+  .isActiveButton {
+    font-size: 0.7rem !important;
+  }
+}

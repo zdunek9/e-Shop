@@ -9,36 +9,6 @@
   flex-direction: column;
   padding: 30px;
 }
-.headerShopWrapper {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--black);
-}
-.titleHeaderShopWrapper {
-  font-size: 2.3rem;
-  font-weight: 600;
-  margin: 2vw 4vw;
-  text-transform: uppercase;
-}
-.headerShopWrapper button {
-  font-size: 1.1rem;
-  padding: 10px 40px;
-  margin: 0;
-  border-radius: 20px;
-  border: 1px solid var(--black);
-  color: var(--white);
-  font-weight: 600;
-  background-color: var(--black);
-  cursor: pointer;
-  transition: 0.3s;
-  position: relative;
-}
-.headerShopWrapper button:first-child {
-  margin-right: -10px;
-}
 .shopItemsWrapper {
   display: flex;
   width: 100%;
@@ -67,20 +37,6 @@
 .shopCategory ul li:hover {
   background-color: rgb(182, 177, 177);
 }
-.loginShopWrapper {
-  display: flex;
-  align-items: center;
-  height: 50px;
-}
-.FontAwesomeIcon {
-  font-size: 2rem;
-  margin: 0 10px 0 25px;
-  cursor: pointer;
-  padding: 5px;
-}
-.FontAwesomeIcon:hover {
-  color: var(--hoverBTN);
-}
 .shoppingCardCounter {
   position: absolute;
   color: var(--white);
@@ -90,9 +46,7 @@
   top: -70%;
   right: 0;
 }
-.counterWrapper {
-  position: relative;
-}
+
 .shopItems {
   width: 100%;
   width: 1050px;
@@ -103,104 +57,14 @@
   background-color: var(--white);
   border-radius: 20px;
 }
-.isActiveButton {
-  background-color: var(--black) !important;
-  color: var(--white) !important;
-  font-size: 1.3rem !important;
-  z-index: 1 !important;
-}
-.notActive {
-  background-color: var(--white) !important;
-  color: var(--black) !important;
-}
-.loginBTN {
-  border: none !important;
-}
-.loginBTN:hover {
-  background-color: var(--hoverBTN);
-}
-.inputShopWrapper {
-  position: relative;
-}
-.searchIcon {
-  position: absolute;
-  left: 3%;
-  top: 25%;
-  font-size: 20px;
-  color: var(--grey);
-}
-.headphonesShop {
-  width: 35%;
-  object-fit: contain;
-  border-radius: 10px;
-}
-.titlePromoShopWrapper h1 {
-  font-size: 50px;
-}
-.titlePromoShopWrapper h2 {
-  font-size: 30px;
-}
-.promoShopWrapper {
-  border-radius: 10px;
-  background-color: white;
-  margin: 50px 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
+
 @media (max-width: 1300px) {
   .shopItems {
     min-width: auto;
     justify-content: space-around;
   }
-  .titleHeaderShopWrapper {
-    font-size: 2rem;
-    margin: 1vw 2vw;
-  }
-  .headerShopWrapper button {
-    font-size: 0.8rem;
-    padding: 10px 30px;
-  }
-  .isActiveButton {
-    font-size: 1rem !important;
-  }
-  .titlePromoShopWrapper h1 {
-    font-size: 40px;
-  }
-  .titlePromoShopWrapper h2 {
-    font-size: 20px;
-  }
 }
 @media (max-width: 1050px) {
-  .searchIcon {
-    display: none;
-  }
-  .titleHeaderShopWrapper {
-    font-size: 1.6rem;
-    margin: 0;
-  }
-  .headerShopWrapper button {
-    font-size: 0.7rem;
-    padding: 5px 20px;
-  }
-  .isActiveButton {
-    font-size: 0.9rem !important;
-  }
-  .FontAwesomeIcon {
-    font-size: 1.5rem;
-  }
-  .shoppingCardCounter {
-    padding: 3px 7px;
-  }
-  .titlePromoShopWrapper h1 {
-    font-size: 30px;
-  }
-  .titlePromoShopWrapper h2 {
-    font-size: 15px;
-  }
-  .headphonesShop {
-    width: 50%;
-  }
   .shopCategory {
     min-width: auto;
     padding: 40px 1vw;
@@ -208,13 +72,6 @@
   }
 }
 @media (max-width: 800px) {
-  .promoShopWrapper {
-    width: 100%;
-    margin: 0;
-  }
-  .titlePromoShopWrapper h1 {
-    font-size: 20px;
-  }
   .shopCategory {
     min-width: auto;
     padding: 10px 1vw;
@@ -233,12 +90,6 @@
     flex-basis: 30%;
     display: flex;
   }
-  .FontAwesomeIcon {
-    font-size: 2rem;
-    margin: 0 10px 0 25px;
-    cursor: pointer;
-    padding: 5px;
-  }
   .shopCategory ul li p {
     padding: 0 10px;
     font-size: 1rem;
@@ -254,37 +105,10 @@
     min-height: 100vh;
     width: 100%;
   }
-  .titleHeaderShopWrapper {
-    padding: 0 15px 0 0;
-  }
 }
 @media (max-width: 600px) {
   .shopCategory ul li p {
     padding: 0 2px;
     font-size: 0.8rem;
-  }
-  .loginShopWrapper{
-    flex-direction: column;
-  }
-  .counterWrapper{
-    position: block;
-    top:10%;
-    font-size: 12px;
-  }
-  .FontAwesomeIcon{
-    font-size: 18px;
-  }
-  .shoppingCardCounter{
-    top:0;
-    right:-10px;
-  }
-  .titleHeaderShopWrapper {
-    font-size: 1.5rem;
-  }
-  .headerShopWrapper button {
-    font-size: 0.6rem;
-  }
-  .isActiveButton {
-    font-size: 0.7rem !important;
   }
 }

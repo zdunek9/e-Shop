@@ -13,13 +13,12 @@
 }
 .mainShopDetails {
   width: 60vw;
-  /* height: 60vh; */
   display: flex;
   align-items: center;
   padding: 40px;
   border-radius: 20px;
   background-color: white;
-  position:relative;
+  position: relative;
 }
 .imgShopDetails {
   width: 50%;
@@ -34,20 +33,64 @@
 }
 .descShopDetails {
   font-size: 1.2rem;
-  padding:20px 0;
+  padding: 20px 0;
   flex-grow: 1;
 }
 .ratingShopDetails {
-  position:absolute;
-  top:10px;
-  left:10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
   background-color: yellow;
   border-radius: 100%;
-  padding:15px;
+  padding: 15px;
   font-weight: 600;
 }
 .priceShopDetails {
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+@media (max-width: 1100px) {
+  .mainShopDetails {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .mainShopDetails {
+    padding: 10px;
+  }
+  .titleShopDetails {
+    font-size: 1.5rem;
+  }
+  .descShopDetails {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+  .priceShopDetails {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .titleShopDetails {
+    font-size: 1.1rem;
+  }
+  .descShopDetails {
+    font-size: 0.7rem;
+    padding: 10px 0;
+  }
+  .priceShopDetails {
+    font-size: 1.2rem;
+  }
+  .mainShopDetails {
+    flex-direction: column;
+  }
+  .ratingShopDetails {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  .wrapperShopDetails {
+    width: 100;
+    height: 100%;
+  }
 }
