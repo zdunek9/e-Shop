@@ -120,8 +120,10 @@
     display: none;
   }
   .headerTopBar {
-    display: block;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+  .headerTopBarCat{
+    width: 100%;
   }
   .imageWatch {
     height: 20vh;

@@ -13,9 +13,10 @@
   background-color: white;
   border: 2px solid var(--lessWhite);
   border-radius: 5px;
+  z-index: 3;
 }
 .filtredListShopInputItem {
-  padding: 5px 25px;
+  padding: 10px 25px;
   border-bottom: 1px solid var(--lessWhite);
   overflow: hidden;
   position: relative;
@@ -26,8 +27,8 @@
   top: 0;
   left: -23px;
   border-left: 18px solid black;
-  border-top: 35px solid transparent;
-  border-bottom: 35px solid transparent;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
 }
 .filtredListShopInputItem:hover::before {
   left: 0;
@@ -38,9 +39,10 @@
   object-fit: contain;
   margin-right: 15px;
 }
-.filtredListShopInputItem a {
+.filtredListShopInputItem div {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 @media (max-width: 1300px) {
   .filtredListShopInput {
@@ -66,6 +68,5 @@
   }
   .filtredListShopInput {
     width: 0px;
-
   }
 }

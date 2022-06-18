@@ -22,6 +22,11 @@ const ShopHeader = (props) => {
     dispatch(counterActions.changeGender(false));
     props.changeState(false);
   };
+
+  let [showInfo1, setShowInfo1] = useState(false);
+  const hideInput = () => {
+    setShowInfo1(true);
+  };
   return (
     <div className={classes.headerShopWrapper}>
       <div>
@@ -44,8 +49,15 @@ const ShopHeader = (props) => {
         </button>
       </div>
       <div className={classes.inputShopWrapper}>
-        <ShopInput arrayData={props.arrayData} />
-        <FontAwesomeIcon icon={faSearch} className={classes.searchIcon} />
+        <ShopInput
+          hideInput={hideInput}
+          arrayData={props.arrayData}
+          show={showInfo1}
+          onClickOutside={() => {
+            setShowInfo1(false);
+          }}
+        />
+        <FontAwesomeIcon icon={faSearch} className={classes.searchIcon} onClick={hideInput}/>
       </div>
       <div className={classes.loginShopWrapper}>
         <button className={classes.loginBTN}>Login</button>

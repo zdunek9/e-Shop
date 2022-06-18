@@ -19,11 +19,11 @@ const Contact = () => {
       </div>
       <div className={classes.bottomWrapperContact}>
         <h3>Get In Touch</h3>
-        <a href="temp">
-          <img src={twitter} alt="twitter" />
+        <a href="/#">
+          <img src={twitter} alt="EmptyLink" />
         </a>
-        <a href="temp">
-          <img src={facebook} alt="facebook" />
+        <a href="/#">
+          <img src={facebook} alt="EmptyLink" />
         </a>
         <a href="https://github.com/zdunek9" target="_blank" rel="noreferrer">
           <img src={github} alt="github" />

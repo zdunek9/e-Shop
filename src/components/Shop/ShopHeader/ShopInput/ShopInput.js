@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import classes from "./ShopInput.module.css";
 import ShopDetails from "../../ShopDetails/ShopDetails";
 const ShopInput = (props) => {
   const [filtredArray, setFiltredArray] = useState([]);
-  const [closeInput, setCloseInput] = useState(true);
   const [itemDetails, setItemDetails] = useState(null);
 
   const array = props.arrayData;
@@ -22,19 +21,13 @@ const ShopInput = (props) => {
           licznik++;
           return el;
         }
+        return null
       })
     );
     if (searchWord === "") {
       setFiltredArray([]);
     }
   };
-  const closeWindow = () => {
-    setCloseInput(false);
-  };
-  const openeWindow = () => {
-    setCloseInput(true);
-  };
-
   const openDetailsItem = (detailID) => {
     setItemDetails((detailID = detailID - 1));
   };
@@ -43,9 +36,25 @@ const ShopInput = (props) => {
       setItemDetails(null);
     }
   };
+
+  const ref = useRef(null);
+  const { onClickOutside } = props;
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        onClickOutside && onClickOutside();
+      }
+    };
+    document.addEventListener("click", handleClickOutside, true);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+    };
+  }, [onClickOutside]);
+
   return (
-    <>
-      {(itemDetails || itemDetails == 0) && (
+    <div ref={ref}>
+      {(itemDetails || itemDetails === 0) && (
         <ShopDetails
           title={array[itemDetails].title}
           price={array[itemDetails].price}
@@ -56,16 +65,16 @@ const ShopInput = (props) => {
           isWindowClosed={closeWindoww}
         />
       )}
-
-      <div onMouseLeave={closeWindow} onClick={openeWindow}>
+      <div>
         <input
+          onClick={props.hideInput}
           type="text"
           className={classes.inputShop}
           placeholder="Search"
           onChange={findItem}
           defaultValue=""
         />
-        {closeInput && (
+        {props.show && (
           <ul className={classes.filtredListShopInput}>
             {filtredArray.map((el) => (
               <li
@@ -73,15 +82,15 @@ const ShopInput = (props) => {
                 className={classes.filtredListShopInputItem}
                 onClick={() => openDetailsItem(el.id)}
               >
-                <a href="#">
-                  <img src={el.img} alt="item photo" /> {el.title}
-                </a>
+                <div>
+                  <img src={el.img} alt={el.title} /> {el.title}
+                </div>
               </li>
             ))}
           </ul>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
