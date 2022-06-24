@@ -43,12 +43,3 @@ a:visited {
 button {
   font-family: "Poppins", sans-serif;
 }
-.errorHandler{
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-}

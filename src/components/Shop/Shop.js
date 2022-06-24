@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import ShopDetails from "./ShopDetails/ShopDetails";
 import PromoItem from "./PromoItem/PromoItem";
 import ShopHeader from "./ShopHeader/ShopHeader";
+import Loading from "./Loading/Loading";
 
 const Shop = (props) => {
   const gender = useSelector((state) => state.counter.gender);
@@ -91,7 +92,9 @@ const Shop = (props) => {
             </ul>
           </div>
           <div className={classes.shopItems}>
-            {data &&
+            {props.catchError?<p>{props.catchError}</p>:(!data ? (
+              <Loading />
+            ) : (
               data.map((element) => (
                 <ShopItem
                   key={element.id}
@@ -101,7 +104,8 @@ const Shop = (props) => {
                   img={element.image}
                   detailID={openDetailsItem}
                 />
-              ))}
+              ))
+            ))}
           </div>
         </div>
       </div>

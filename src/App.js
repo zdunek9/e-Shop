@@ -7,7 +7,6 @@ import { Route } from "react-router-dom";
 import About from "./components/Header/About/About";
 import Contact from "./components/Header/Contact/Contact";
 import { useEffect, useState } from "react";
-import Loading from "./components/Shop/Loading/Loading";
 function App() {
   const showCard = useSelector((state) => state.counter.showCard);
   const [fetchData, setFetchData] = useState(null);
@@ -34,14 +33,8 @@ function App() {
         <Contact />
       </Route>
       <Route path="/shop">
-        {catchError ? (
-          <section className={classes.errorHandler}>{catchError}</section>
-        ) : fetchData ? (
-          <Shop fetchData={fetchData} />
-        ) : (
-          <Loading />
-        )}
-        {showCard && <Cart catchError={catchError} />}
+        <Shop catchError={catchError} fetchData={fetchData} />
+        {showCard && <Cart />}
       </Route>
     </div>
   );
