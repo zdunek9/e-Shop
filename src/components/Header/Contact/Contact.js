@@ -5,6 +5,7 @@ import github from "../../Img/icons/github.png";
 import linkedin from "../../Img/icons/linkedin.png";
 import arrowUp from "../../Img/icons/up-arrow.png";
 import Form from "./Form/Form";
+import { HashLink } from "react-router-hash-link";
 const Contact = () => {
   return (
     <section className={classes.wrapperContact} id="Contact">
@@ -36,9 +37,9 @@ const Contact = () => {
           <img src={linkedin} alt="linkedin" />
         </a>
       </div>
-      <a className={classes.buttonArrowUp} href="#Header">
+      <HashLink to="#Header" className={classes.buttonArrowUp}>
         <img src={arrowUp} className={classes.arrowUp} alt="arrowUp"></img>
-      </a>
+      </HashLink>
     </section>
   );
 };

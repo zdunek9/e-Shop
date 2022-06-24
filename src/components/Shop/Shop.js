@@ -5,30 +5,19 @@ import { faShirt, faGem, faLaptop } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import ShopDetails from "./ShopDetails/ShopDetails";
-import Loading from "./Loading/Loading";
 import PromoItem from "./PromoItem/PromoItem";
 import ShopHeader from "./ShopHeader/ShopHeader";
 
-const Shop = () => {
+const Shop = (props) => {
   const gender = useSelector((state) => state.counter.gender);
   const [arrayData, setArrayData] = useState(null);
   const [data, setData] = useState(null);
   const [itemDetails, setItemDetails] = useState(null);
   const [catID, setCatID] = useState(0);
   useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-    if (!response.ok) {
-      throw new Error("Could not fetch data");
-    }
-    const tempArray = await response.json();
-    setData(tempArray);
-    setArrayData(tempArray);
-  };
-
+    setArrayData(props.fetchData);
+    setData(props.fetchData);
+  }, [props.fetchData]);
   const catChangeClothing = () => {
     if (gender) {
       setData(
@@ -57,7 +46,6 @@ const Shop = () => {
       setItemDetails(null);
     }
   };
-
   const changeState = (value) => {
     if (value && catID === 0) {
       setData(
@@ -69,7 +57,6 @@ const Shop = () => {
       );
     }
   };
-
   return (
     <div className={classes.shopMainWrapper}>
       {(itemDetails || itemDetails === 0) && (
@@ -103,9 +90,7 @@ const Shop = () => {
               </li>
             </ul>
           </div>
-
           <div className={classes.shopItems}>
-            {!data && <Loading />}
             {data &&
               data.map((element) => (
                 <ShopItem
@@ -123,5 +108,4 @@ const Shop = () => {
     </div>
   );
 };
-
 export default Shop;

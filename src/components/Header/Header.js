@@ -1,6 +1,7 @@
 import classes from "./Header.module.css";
 import image_watch from "../Img/ew.png";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 const Header = () => {
   return (
     <section className={classes.headerWrapper} id="Header">
@@ -10,11 +11,11 @@ const Header = () => {
         </div>
         <div className={classes.headerTopBarCat}>
           <p>Home</p>
-          <a className={classes.aboutHeader} href="#About">
+          <HashLink to="#About" className={classes.aboutHeader} href="#About">
             about
-          </a>
+          </HashLink>
           <Link to="/shop">shop</Link>
-          <a href="#Contact">contact</a>
+          <HashLink to="#Contact">contact</HashLink>
         </div>
       </div>
       <div className={classes.headerMainPage}>
@@ -30,9 +31,9 @@ const Header = () => {
           <Link to="/shop">
             <button className={classes.shopNowBTN}>Shop Now</button>
           </Link>
-          <a href="#About" className={classes.LearnMoreBTN}>
+          <HashLink to="#About" className={classes.LearnMoreBTN}>
             Learn more
-          </a>
+          </HashLink>
         </div>
       </div>
     </section>
